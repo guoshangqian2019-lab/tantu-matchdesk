@@ -27,7 +27,7 @@ if(new URLSearchParams(location.search).get("view")==="mobile")document.document
 const rosterNames=`嗨仔、二九、尚兴、太杰、亚扁、亚信、BK、亚毅、猪冰、鸡宇、上乾、汉辉、二胜、华基、华炎、二龙、刘罗、荣杰、垌满、润芳、亚梁、亚龙、华杰、华耀、波仔、烂同、浩波、扁头、米高、上如、作伟、鸡华、上辉、大推
 春旭、夏宇、亚虎、老池、亚松、大尚、国振、上军、观康、黎百、锋兄、宇波、志强、陈通、国鑫、文华、明总、海明、朝晖、蒙成、祥庄、亚春、姚超、飞鱼、坏人、高毅、华春、标公、上轩、肥林、康敏、九宪
 上太、亚艺、亚有、康寿、华康、城州、小梁、亚杰、小明、勾木、晓斌、家浩、亚荣、上海`.split(/[、，,\s]+/).filter(Boolean);
-const allNames=[...new Set(rosterNames)];let sides=[['观康','上太','华康','晓斌','超伟','大眼','亚蛇','陈宪'],['明总','虎哥','昭辉','大亮','小明','土康','亚有','陈聪']];let keepers=new Set();
+const allNames=[...new Set(rosterNames)];let sides=[[],[]];let keepers=new Set();
 const $=s=>document.querySelector(s), colors=[$('#color0'),$('#color1')], teamInputs=[$('#team0'),$('#team1')];
 function escapeHtml(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
 function draw(){drawTeams();drawRoster();drawPreview()}
